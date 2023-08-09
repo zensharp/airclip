@@ -10,6 +10,6 @@ Hello world!
 ## Reverse Proxy
 ```shell
 $ curl https://clipdrop.example.com -d 'Hello world!'
-$ curl http://clipdrop.example.com
+$ curl https://clipdrop.example.com
 Hello world!
 ```
