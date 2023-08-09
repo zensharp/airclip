@@ -34,11 +34,6 @@ namespace Clipdrop.Controllers
 				var data = await reader.ReadToEndAsync();
 				Console.WriteLine(data);
 
-				if (string.IsNullOrEmpty(data))
-				{
-					return BadRequest();
-				}
-
 				System.IO.File.WriteAllText("clipboard.txt", data);
 
 				return StatusCode(StatusCodes.Status200OK, $"{data.Length} bytes uploaded to ClipDrop!" + Environment.NewLine);
