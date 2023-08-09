@@ -32,7 +32,6 @@ namespace Clipdrop.Controllers
 			using (var reader = new StreamReader(HttpContext.Request.Body))
 			{
 				var data = await reader.ReadToEndAsync();
-				Console.WriteLine(data);
 
 				System.IO.File.WriteAllText("clipboard.txt", data);
 
